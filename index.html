@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Mac book Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='./css/style.css'>
+    <link rel="shortcut icon" href="./images/mac.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class='container'>
+        <!-- Item details -->
+        <div class='row mt-5'>
+            <!-- Item image -->
+            <div class='item-img col-md-6'>
+                <img src='./images/mac.png' class="img-fluid" alt=''>
+            </div>
+
+            <!-- Item description -->
+            <div class='item-details col-md-6'>
+                <div class='description'>
+                    <h3>Customize your Blue 24-inch iMac with Apple M1 chip.</h3>
+                    <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores. 7-core GPU, and
+                        16-core
+                        Neural Engine 8GB unified memory 256GB SSD storage Two Thunderboilt/ USB 4 ports Magic Mouse
+                        Keyboard US
+                        English </p>
+                </div>
+
+                <!-- Memory items -->
+                <div class='memory mt-4'>
+                    <h6>Memory</h6>
+                    <button onclick="handlePrice('memory-cost',0)" class="btn btn-sm btn-outline-dark"
+                        data-bs-placement="top" title="$0">
+                        8GB unified memory
+                    </button>
+                    <button onclick="handlePrice('memory-cost',180)" class="btn btn-sm btn-outline-dark"
+                        data-bs-placement="top" title="$180">
+                        16GB unified memory
+                    </button>
+                </div>
+
+                <!-- Storage items -->
+                <div class='storage mt-4'>
+                    <h6>Storage</h6>
+                    <button onclick="handlePrice('storage-cost',0)" class="btn btn-sm btn-outline-dark"
+                        data-bs-placement="top" title="$0">
+                        256GB SSD storage
+                    </button>
+                    <button onclick="handlePrice('storage-cost',100)" class="btn btn-sm btn-outline-dark"
+                        data-bs-placement="top" title="$100">
+                        512GB SSD storage
+                    </button>
+                    <button onclick="handlePrice('storage-cost',180)" class="btn btn-sm btn-outline-dark"
+                        data-bs-placement="top" title="$180">
+                        1TB SSD storage
+                    </button>
+                </div>
+
+                <!-- Delivery Charges -->
+                <div class='delivery mt-4'>
+                    <h6>Choose your delivery option</h6>
+                    <button onclick="handlePrice('delivery-charge',0)" class="btn btn-sm btn-outline-dark"
+                        data-bs-placement="top" title="$0">
+                        Friday, Aug 25 FREE Prime Delivery
+                    </button>
+                    <button onclick="handlePrice('delivery-charge',20)" class="btn btn-sm btn-outline-dark"
+                        data-bs-placement="top" title="$20">
+                        Friday, Aug 21 FREE Prime Delivery charge $20
+                    </button>
+                </div>
+
+                <!-- Pricing Area  -->
+                <div class='price my-5 row'>
+                    <div class='col-7 fw-bold'>
+                        <div class='best-price'>
+                            <span>Best Price</span>
+                            <span id="best-price" class="float-end fas fa-dollar-sign">1299</span>
+                            <hr>
+                        </div>
+                        <div class='extra-memory-cost'>
+                            <span>Extra Memory Cost</span>
+                            <span id="memory-cost" class="float-end fas fa-dollar-sign">0</span>
+                            <hr>
+                        </div>
+                        <div class='extra-storage-cost'>
+                            <span>Extra Storage Cost</span>
+                            <span id="storage-cost" class="float-end fas fa-dollar-sign">0</span>
+                            <hr>
+                        </div>
+                        <div class='delivery-charge'>
+                            <span>Delivery Charge</span>
+                            <span id="delivery-charge" class="float-end fas fa-dollar-sign">0</span>
+                            <hr class="hr">
+                        </div>
+                        <div class='total-price'>
+                            <span>Total Price</span>
+                            <span id="total" class="float-end fas fa-dollar-sign">1299</span>
+                            <hr>
+                        </div>
+                        <div class='total-price'>
+                            <p class="text-secondary">Add Promo Code</p>
+                            <div class="input-group mb-3">
+                                <input id="promo-code" type="text" class="form-control"
+                                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                <button id="btn" class="input-group-text btn btn-danger text-white"
+                                    onclick="handlePromoCode()">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="hr">
+        <h2 class="text-center text-success my-3">Total: <span class="fas fa-dollar-sign" id="totalWithPromo">1299</span>
+        </h2>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
